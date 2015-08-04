@@ -1,0 +1,17 @@
+<!doctype html>
+<html ng-app="gemStore">
+<head>
+  <title></title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-controller="StoreController as store">
+  <div ng-repeat="product in store.products">
+    <h1> {{product.name}} </h1>
+    <h2> {{product.price | currency}} </h2>
+    <p> {{product.description}} </p>
+    <button ng-show="product.canPurchase"> Add to Cart </button>
+  </div>
+</body>
+</html>
